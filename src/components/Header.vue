@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    export default {
+export default {
     name: "Header",
     data: function() {
         return {
@@ -82,13 +82,12 @@ header {
     height: 120px;
     line-height: 120px;
     ul {
-        list-style-type: none;
         display: flex;
     }
 }
 .menu-btn {
     display: block;
-    margin: 0 10px;
+    margin: 0 15px;
     color: black;
     text-decoration: none;
     &:hover {
