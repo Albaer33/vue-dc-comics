@@ -3,7 +3,8 @@
         <div class="container">
             <ul>
                 <li v-for="(service, index) in services" :key="index">
-                    <img :src="service.imgSource">
+                    <img :src="require(service.imgSource)">
+                    <span>{{service.text}}</span>
                 </li>
             </ul>
         </div>
@@ -19,27 +20,22 @@ export default {
                 {
                     imgSource: '../assets/img/buy-comics-digital-comics.png',
                     text: 'DIGITAL COMICS',
-                    url: '#',
                 },
                 {
                     imgSource: '../assets/img/buy-comics-merchandise.png',
-                    text: 'DIGITAL COMICS',
-                    url: '#',
+                    text: 'DC MERCHANDISE',
                 },
                 {
                     imgSource: '../assets/img/buy-comics-shop-locator.png',
-                    text: 'DIGITAL COMICS',
-                    url: '#',
+                    text: 'COMIC SHOP LOCATOR',
                 },
                 {
                     imgSource: '../assets/img/buy-comics-subscriptions.png',
-                    text: 'DIGITAL COMICS',
-                    url: '#',
+                    text: 'SUBSCRIPTION',
                 },
                 {
                     imgSource: '../assets/img/buy-dc-power-visa.svg',
-                    text: 'DIGITAL COMICS',
-                    url: '#',
+                    text: 'DC POWER VISA',
                 },
             ],
         };
