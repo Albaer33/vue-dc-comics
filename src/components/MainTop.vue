@@ -1,29 +1,32 @@
 <template>
     <main>
-        <Banner imageObject="banner" />
-        <div class="container content">
-            
+        <div class="img-container">
+            <img src="../assets/img/jumbotron.jpg" alt="">
+        </div>
+
+        <div class="container card-list">
+            <Card v-for="(card, index ) in cards" :key="index" :cardObject="card"/>
         </div>
     </main>
 </template>
 
 <script>
-import Banner from "./Banner.vue";
+import Card from "./Card.vue";
 
 export default {
     name: "MainTop",
     components: {
-        Banner,
+        Card
     },
     data: function() {
         return {
             banners: [
                 {
-                    imageSource: '../assets/img/jumbotron.jpg',
+                    imageSource: require('../assets/img/jumbotron.jpg'),
                     imageAlt: 'Banner DC',
                 },
             ],
-            books: [
+            cards: [
                 {
                     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
                     "price": "$19.99",
@@ -106,6 +109,15 @@ export default {
 main {
     color: white;
     background-color: #1c1c1c;
-    height: 1000px;
+    overflow: hidden;
+    .img-container {
+        overflow: hidden;
+        height:450px;
+    }
+    .card-list {
+        padding: 100px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 </style>
