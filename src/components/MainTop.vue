@@ -19,8 +19,8 @@ export default {
         return {
             banners: [
                 {
-                    imageSource: 'https://previews.123rf.com/images/jakobradlgruber/jakobradlgruber1803/jakobradlgruber180300030/98416226-panoramic-view-of-beautiful-big-sur-coastal-landscape-in-beautiful-golden-evening-light-at-sunset-wi.jpg',
-                    imageAlt: 'Mare',
+                    imageSource: '../assets/img/jumbotron.jpg',
+                    imageAlt: 'Banner DC',
                 },
             ],
             books: [
@@ -106,7 +106,6 @@ export default {
 main {
     color: white;
     background-color: #1c1c1c;
-    height: 150px;
-    line-height: 150px;
+    height: 1000px;
 }
 </style>
