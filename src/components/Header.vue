@@ -5,7 +5,10 @@
         </div>
         <ul>
             <li class="item" v-for="(link, index) in links" :key="index">
-                <a class="menu-btn" :href="link.url">{{link.text}}</a>
+                <a class="menu-btn" :href="link.url">
+                    {{link.text}}
+                    <div class="current" v-if="link.current"></div>
+                </a>
             </li>
         </ul>
     </header>
@@ -25,7 +28,7 @@ export default {
                 {
                     text: 'COMICS',
                     url: '#',
-                    current: false
+                    current: true
                 },
                 {
                     text: 'MOVIES',
@@ -86,12 +89,18 @@ header {
     }
 }
 .menu-btn {
+    position: relative;
     display: block;
     margin: 0 15px;
     color: black;
     text-decoration: none;
-    &:hover {
-        border-bottom: 4px solid $brand_primary_color;
+    .current {
+        display: block;
+        position: absolute;
+        background-color: $brand_primary_color;
+        height: 5px;
+        width: 100%;
+        bottom: 0;
     }
 }
 .logo {
