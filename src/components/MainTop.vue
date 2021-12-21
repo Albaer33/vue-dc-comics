@@ -7,6 +7,8 @@
         <div class="container card-list">
             <Card v-for="(card, index ) in cards" :key="index" :cardObject="card"/>
         </div>
+
+        <a href="#">LOAD MORE</a>
     </main>
 </template>
 
@@ -106,7 +108,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../style/variables.scss';
+
 main {
+    text-align: center;
     color: white;
     background-color: #1c1c1c;
     overflow: hidden;
@@ -115,9 +120,18 @@ main {
         height:450px;
     }
     .card-list {
-        padding: 100px 0;
+        padding: 50px 0;
         display: flex;
         flex-wrap: wrap;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        background-color: $brand_primary_color;
+        padding: 10px 40px;
+        margin-bottom: 100px;
     }
 }
 </style>
